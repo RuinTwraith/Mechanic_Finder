@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(234, 231, 220);
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg, rgba(255, 60, 102, 0.904), rgba(163, 131, 252, 0.815));
+    /* background:-webkit-linear-gradient(0, blue 50%, white 100%); */
+    box-shadow: 0 5px 15px 0 rgba(207, 137, 253, 0.712);
+    
+}
+
+@font-face{
+    font-family: Righteous;
+    src: url('../Mechanic Finder/fonts/Righteous/Righteous-Regular.ttf')
+}
+
+@font-face{
+    font-family: Questrial;
+    src: url('../Mechanic Finder/fonts/Questrial/Questrial-Regular.ttf')
+}
+
+
+body{
+    background: rgb(234, 231, 220);
+}
+
+.header-body{
+    /* background: rgb(23, 37, 42); */
+    background: rgb(20, 20, 20);
+    display: block;
+    margin-top: 10px;
+    color: rgb(224, 224, 224);
+}
+
+
+.inner-header{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto; 
+    
+}
+
+.logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 10px;
+    
+}
+
+.logo_container h1{
+    color: rgb(234, 231, 220);
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Righteous, cursive;
+    font-size: 32px;
+    font-weight: 200;
+
+}
+
+.logo_container h1 span{
+    font-weight: 800;  
+
+}
+
+.navigation{
+    float: right;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: rgb(234, 231, 220);
+    font-family: Righteous;
+    font-size: 16px;
+}
+
+.navigation li:hover{
+    color: rgba(255, 60, 102, 0.904);
+}
+
+/* search bar css */
+.search-box{
+    position: absolute;
+    margin-top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(219, 215, 201);
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+
+.search-box:hover > .search-txt{
+    width: 400px;
+}
+
+.search-btn{
+    color: rgb(23, 37, 42);
+    padding: 10px;
+    float: right;
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    background: rgb(234, 231, 220);
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding-left: 15px;
+    color: rgb(23, 37, 42);
+    font-size: 16px;
+    transition: 400ms;
+    line-height: 50px;
+    width: 350px;
+    font-family: Questrial;
+    font-size: large;
+}
+
+.cover{
+    display: grid;
+    /* background: linear-gradient(to bottom, rgb(234, 231, 220), white, rgb(234, 231, 220)); */
+    grid-template-columns: auto auto;
+    margin: 0 100px;
+    justify-content: space-evenly;
+    align-content: space-around;
+    padding: 20px;
+}
+
+.cover-txt{
+    margin-top: 200px;
+    width: 500px;
+    height: 380px;
+    text-align: center;
+    font-size: 45px;
+    font-family: Questrial;
+    word-spacing: 5px;
+    padding: 0 10px;
+    
+    /* background: red; */
+    color: rgb(255, 51, 64);
+
+        
+}
+
+.cover-img{    
+    width: 700px;
+    height: 500px;
+    margin-top: 100px;
+    border-radius: 15px;
+       
+}
+
+.services{
+    margin: 50px 0;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    /* background: linear-gradient(to right, rgb(234, 231, 220), rgb(240, 186, 141)20%, rgb(234, 231, 220)); */
+    background: rgba(152, 214, 255, 0.897);
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    align-content: space-around;
+    
+}
+
+.service-item{
+    margin: 50px 30px;
+    height: 300px;
+    width: 300px;
+    /* background: rgba(230, 78, 123, 0.5); */
+    /* background: rgba(199, 152, 253, 0.753); */
+    background: linear-gradient(28deg, rgba(112, 114, 208, 0.726)10%, rgba(225, 128, 255, 0.788)100%);
+    flex-shrink: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    transition: all 350ms ease-in-out;
+    box-shadow: 0 20px 30px 0 rgba(163, 115, 253, 0.534);
+    -webkit-transition: all 400ms ease-in-out;
+    border-radius: 20px;
+    
+    
+}
+
+.service-item:hover{
+    transform: scale(1.1);
+    /* background: rgb(118, 154, 255); */
+    background: linear-gradient(28deg, rgba(255, 128, 217, 0.788)10%, rgba(255, 128, 160, 0.726)100%);
+    box-shadow: 0 10px 25px 0 rgba(233, 126, 255, 0.534);
+
+}
+
+.service-svg{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.item-heading{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: Questrial;
+    font-weight: 600;
+    
+}
+
+.item-para{
+    margin: 10px 15px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Questrial;
+
+}
+
+.footer {
+    
+    background: rgb(23, 37, 42);
+    color: rgb(171, 171, 171);
+    width: 100%; 
+        
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px 10px;
+    font-family: Questrial;
+    justify-content: space-evenly;
+    align-content: space-around;
+    padding: 50px 0;
+
+}
+
+
+.footer-item{
+    
+    /* border: 2px dashed black; */
+    margin: 30px 0 20px 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+.foot-heading{
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    font-weight: 100;
+}
+
+.address{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 100;
+    
+}
+
+.copyright{
+    background-color: rgb(15, 24, 27);
+    padding: 10px;
+    color: white;
+    font-family: Questrial;    
+}
+
+.foot-txt{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(171, 171, 171);
+}
+
+.foot-txt:hover{
+    color: white;
+}
+
+.about-heading{
+    font-family: Questrial;
+    margin: 100px;
+    font-size: 30px;
+    color: rgb(255, 51, 64);
+}
+
+.about-para{
+    font-family: Questrial;
+    margin: 0 100px;
+    font-size: 22px;
+    font-stretch: extra-expanded;
+    line-height: 50px;
+    padding-bottom: 150px;
+    
+}
+
+.about-img{
+    margin: 50px 50px;
+    float: right;
+    height: 250px;
+    width: 400px;
+}
+
+.faq{
+    margin: 50px 100px;
+    font-family: Questrial;
+    color: rgb(255, 51, 64);
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    
+}
+
+.faq-heading{
+    font-family: Questrial;
+    margin:10px 100px;
+    font-size: 30px;
+    color: rgb(255, 51, 64);
+}
+
+.faq-para{    
+    margin: 0 100px;
+    padding-bottom: 100px;
+    font-family: Questrial;
+    font-size: 22px;
+    font-stretch: extra-expanded;
+    line-height: 50px;   
+       
+}
+
+.loginbox{
+    width: 350px;
+    height: 500px;
+    background: linear-gradient(0deg, rgb(174, 245, 153), rgb(255, 189, 139), rgb(253, 169, 192));    
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 30px;
+    font-family: Questrial;    
+    letter-spacing:1px;
+
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    border-top: 3px solid rgb(241, 150, 46);   
+    border-left: 1px solid rgb(241, 150, 46);
+    background: rgb(234, 231, 220);
+    
+    left: calc(50% - 50px);
+    
+}
+
+.login-here{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-family: Questrial;
+    font-size: 16px;
+    letter-spacing:1px;
+}
+
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    margin-left: 80px;
+    margin-top: 10px;
+    width: 120px;
+    height: 40px;
+    background: transparent;
+    color: rgba(40, 112, 76, 0.774);
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px 0 rgba(233, 154, 37, 0.5);
+    transition: all 300ms ease-in-out;
+}
+
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    color: white;    
+    background: linear-gradient(90deg, rgb(143, 169, 253), rgb(166, 130, 250));
+    box-shadow: 0 10px 10px 0 rgba(80, 121, 255, 0.342);
+}
+
+.forgot-create{   
+    margin-top: 60px;
+    color: rgb(139, 0, 0); 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    
+}
+
+.loginbox a{
+    color: rgba(40, 112, 76, 0.774);
+    transition: all 400ms ease-in-out;
+}
+.loginbox a:hover{
+    color: rgb(2, 5, 3);
+}
